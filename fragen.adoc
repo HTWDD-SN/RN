@@ -1,0 +1,47 @@
+// == Hello World!: Java-Crashkurs [Kap. 1.8]
+:solution:
+
+### Zeichenkette und `new`
+[question,mc]
+====
+Wo ist das `new` zur Instanziierung geblieben? `String s = "abc";`
+
+- [ ] Man kann auch schreiben `String s = new "abc";`
+- [ ] Man kann auch schreiben `String s = new("abc");`
+- [x] Man kann auch schreiben `String s = new String("abc");`
+- [x] Ein `new` ist gar nicht notwendig.
+====
+
+ifdef::solution[]
+.Antwort
+// - [x] Man kann auch schreiben `String s = new String("abc");`
+// - [x] Ein `new` ist gar nicht notwendig.
+
+Der Ausdruck `"abc"` ist ein Zeichenketten-Literal. Literale erzeugen direkt eine Instanz ihres Typs, hier eine Instanz einer Zeichenkette. Literale werden ohne den `new`-Operator verwendet.
+
+Es ist auch legitim `new String("abc")` zu schreiben, was aber doppelte Arbeit leistet: die String-Instanz des Literals ist Argument im String-Konstruktor, der seinerseits eine neue, wertgleiche String-Instanz erzeugt.
+endif::solution[]
+
+### Javadoc-Kommentar vs. "normaler" Kommentar
+Wie unterscheidet sich ein Javadoc-Kommentar von normalen Kommentaren?
+
+ifdef::solution[]
+.Antwort
+Ein Javadoc-Kommentar beginnt mit `/\**` und endet mit `*/`. "Normale" Kommentare sind entweder einzeilig (`//`) oder mehrzeilig (von `/\*` bis `*/`). Javadoc-Kommentare werden vom dem Tool `javadoc` bei der Generierung der Dokumentation eines Programms mit berücksichtigt.
+endif::solution[]
+
+### Aussehen eines Javadoc-Kommentars
+[question,mc]
+====
+Wie sieht ein Javadoc-Kommentar mit seinem öffnenden und schließenden Kommentarteil aus?
+
+- [ ] `/\*` und `*/`
+- [x] `/\**` und `*/`
+- [ ] `/\**` und `/*`
+- [ ] `/\*` und `**/`
+====
+
+ifdef::solution[]
+// .Antwort
+// - [x] `/\**` und `*/`
+endif::solution[]
