@@ -30,6 +30,21 @@
         "name": "Blackfin",
         "address": "1620 I St NW"
       }
+    },
+
+
+    { "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [ [13.805243, 51.046872 ], [13.819318,  51.054371], [13.805565, 51.046400] ]            
+        ]
+      },
+      "properties": {
+        "prop0": "value0",
+        "prop1": {"this": "that"}
+      }
     }
+
   ]
 }
